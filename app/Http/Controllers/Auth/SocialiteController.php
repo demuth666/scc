@@ -28,7 +28,7 @@ class SocialiteController extends Controller
             ], [
                 'name' => $socialUser->name,
                 'email' => $socialUser->email,
-                'password' => Hash::make('password'),
+//                'password' => Hash::make($socialUser->password),
                 'google_token' => $socialUser->token,
                 'google_refresh_token' => $socialUser->refreshToken,
             ]);
