@@ -1,4 +1,4 @@
-<svg width="150" height="50" viewBox="0 0 181 72" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="140" height="40" viewBox="0 0 181 72" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <rect width="181" height="72" fill="url(#pattern0_22_39)"/>
     <defs>
         <pattern id="pattern0_22_39" patternContentUnits="objectBoundingBox" width="1" height="1">

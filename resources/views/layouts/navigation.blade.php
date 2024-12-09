@@ -34,6 +34,12 @@
                     </x-slot>
 
                     <x-slot name="content">
+                        @if(auth()->user()->roles === 'admin')
+                            <x-dropdown-link :href="route('filament.admin.pages.dashboard')">
+                                {{ __('Admin Panel') }}
+                            </x-dropdown-link>
+                        @endif
+
                         <x-dropdown-link :href="route('profile.edit')">
                             {{ __('Profile') }}
                         </x-dropdown-link>
