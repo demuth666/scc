@@ -23,4 +23,9 @@ class Rooms extends Model
             }
         });
     }
+
+    public function booking(): \Illuminate\Database\Eloquent\Relations\HasMany
+    {
+        return $this->hasMany(Booking::class);
+    }
 }

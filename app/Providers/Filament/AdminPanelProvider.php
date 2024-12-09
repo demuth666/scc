@@ -27,6 +27,8 @@ class AdminPanelProvider extends PanelProvider
             ->id('admin')
             ->path('admin')
             ->login()
+            ->profile()
+            ->darkMode(false)
             ->sidebarCollapsibleOnDesktop()
             ->colors([
                 'primary' => Color::Orange,
