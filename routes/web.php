@@ -2,16 +2,17 @@
 
 use App\Http\Controllers\Auth\SocialiteController;
 use App\Http\Controllers\BookingController;
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers;
 use Laravel\Socialite\Facades\Socialite;
 
-Route::get('/', function () {
-    return redirect(route('login'));
-});
+Route::get('/', [DashboardController::class, 'index']);
 
-Route::get('/dashboard', [Controllers\DashboardController::class, 'index'])->middleware(['auth', 'verified'])->name('dashboard');
+Route::get('/booking/details/{id}', [BookingController::class, 'detail'])->name('booking.details');
+
+//Route::get('/dashboard', [Controllers\DashboardController::class, 'index'])->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
     //booking
@@ -28,4 +29,4 @@ Route::get('/auth/redirect', [SocialiteController::class, 'redirect'])->name('au
 
 Route::get('/auth/{provider}/callback', [SocialiteController::class, 'callback']);
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';

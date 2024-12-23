@@ -89,7 +89,6 @@ class BookingForm extends Component
     public function goToPreviousPage()
     {
         $this->resetErrorBag();
-        $this->validateData();
         $this->currentPage--;
     }
 

@@ -15,7 +15,7 @@
                 2. penggunaan ruangan/ kelas <span class="font-bold underline italic">MAKSIMAL DURASI 3 JAM PEMAKAIAN, DIMULAI PUKUL 08.00 WIB - KELIPATANNYA  DAN DI TUTUP PADA PUKUL 20.00 WIB </span>(apabila terdapat kegiatan kelas melewati durasi yang ditentukan, pihak pengelola berhak memberhentikan kegiatan)</span> <br>
                     </div>
 
-                    <span class="font-bold" >SEBELUM MENGISI GOOGLE FORM SILAHKAN MELIHAT JADWAL KETERSEDIAAN KELAS TERLEBIH DAHULU UNTUK MENGHINDARI MENUMPUKNYA JADWAL DI WAKTU DAN RUANGAN YANG SAMA.</span> <br>
+                    <span class="font-bold" >SEBELUM MENGISI SILAHKAN MELIHAT JADWAL KETERSEDIAAN KELAS TERLEBIH DAHULU UNTUK MENGHINDARI MENUMPUKNYA JADWAL DI WAKTU DAN RUANGAN YANG SAMA.</span> <br>
                     <span class="font-bold" >Klik Disini <a href="https://docs.google.com/spreadsheets/d/1Dq2AW46XR-v0pRXNvO7Gm3enzWvqIk_4_C-tsl3gaps/edit?resourcekey#gid=440145345" class="underline decoration-solid text-blue-400">Lihat Jadwal</a>.</span><br>
                     <span class="font-bold underline" >KETERSEDIAAN RUANGAN/ KELAS UNTUK LATIHAN SENI PERTUNJUKAN YANG BISA DIPAKAI :</span><br>
                     <div class="pl-4">
