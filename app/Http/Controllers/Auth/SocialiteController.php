@@ -22,7 +22,7 @@ class SocialiteController extends Controller
 
         $registeredUser = User::where("google_id", $socialUser->id)->first();
 
-        if(!$registeredUser){
+        if (!$registeredUser) {
             $user = User::updateOrCreate([
                 'google_id' => $socialUser->id,
             ], [
@@ -35,11 +35,11 @@ class SocialiteController extends Controller
 
             Auth::login($user);
 
-            return redirect('/dashboard');
+            return redirect('/');
         }
 
         Auth::login($registeredUser);
 
-        return redirect('/dashboard');
+        return redirect('/');
     }
 }

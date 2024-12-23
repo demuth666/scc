@@ -8,7 +8,9 @@
                     <p class="text-center text-sm">Selamat! Ruangan Anda telah berhasil dipesan</p>
                 </div>
                 <div class="m-4 flex justify-center items-center">
-                    <button type="button" class="inline-flex justify-center py-2 px-6 pb-2 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-[#FF852F] hover:bg-[#ff7636] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#FF852F]"> <a href="/dashboard">Selesai</a></button>
+                    <button type="button"
+                            class="inline-flex justify-center py-2 px-6 pb-2 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-[#FF852F] hover:bg-[#ff7636] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#FF852F]">
+                        <a href="/">Selesai</a></button>
                 </div>
             </div>
         </div>

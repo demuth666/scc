@@ -7,7 +7,7 @@ window.Alpine = Alpine;
 Alpine.start();
 
 import Swiper from 'swiper';
-import { Navigation, Pagination } from 'swiper/modules';
+import {Navigation, Pagination} from 'swiper/modules';
 // import Swiper and modules styles
 import 'swiper/css';
 //import 'swiper/css/navigation';
@@ -30,13 +30,13 @@ const swiper = new Swiper(".swiper", {
     },
     breakpoints: {
         0: {
-            slidesPerView:1
+            slidesPerView: 1
         },
         620: {
-            slidesPerView:2
+            slidesPerView: 2
         },
         1024: {
-            slidesPerView:3
+            slidesPerView: 4
         },
     },
 });

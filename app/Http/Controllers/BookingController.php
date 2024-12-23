@@ -2,21 +2,23 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Booking;
 use App\Models\Rooms;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 
 class BookingController extends Controller
 {
-    public function create($id)
+    public function detail($id)
     {
-        $room = Rooms::find($id);
-        return view('booking-form', [
-            'room' => $room
+        $rooms = Rooms::find($id);
+        $booking = Booking::where('room_id', $id)
+            ->whereDate('tanggal', Carbon::now())
+            ->get();
+//        dd($booking);
+        return view('booking-details', [
+            'room' => $rooms,
+            'booking' => $booking,
         ]);
-    }
-
-    public function store(Request $request, $id)
-    {
-
     }
 }
