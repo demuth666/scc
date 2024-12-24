@@ -28,4 +28,9 @@ class Rooms extends Model
     {
         return $this->hasMany(Booking::class);
     }
+
+    public function facility(): \Illuminate\Database\Eloquent\Relations\belongsToMany
+    {
+        return $this->belongsToMany(Facility::class, 'facility_room');
+    }
 }

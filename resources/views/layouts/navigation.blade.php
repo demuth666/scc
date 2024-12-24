@@ -95,9 +95,11 @@
             </div>
 
             <div class="mt-3 space-y-1">
-                <x-responsive-nav-link :href="route('filament.admin.pages.dashboard')">
-                    {{ __('Admin Panel') }}
-                </x-responsive-nav-link>
+                @if(auth()->user()->roles === 'admin')
+                    <x-responsive-nav-link :href="route('filament.admin.pages.dashboard')">
+                        {{ __('Admin Panel') }}
+                    </x-responsive-nav-link>
+                @endif
 
                 <x-responsive-nav-link :href="route('profile.edit')">
                     {{ __('Profile') }}

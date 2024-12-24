@@ -7,11 +7,14 @@ use App\Filament\Resources\RoomsResource\RelationManagers;
 use App\Models\Rooms;
 use Filament\Forms;
 use Filament\Forms\Components\FileUpload;
+use Filament\Forms\Components\Select;
+use Filament\Forms\Components\TagsInput;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Columns\ImageColumn;
+use Filament\Tables\Columns\TagsColumn;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
@@ -33,6 +36,12 @@ class RoomsResource extends Resource
                 ->label('Nama Ruangan'),
                 TextInput::make('description')
                 ->label('Deskripsi Ruangan'),
+               Select::make('facilities')
+                   ->label('Fasilitas')
+                   ->relationship('facility', 'facility_name') // Menggunakan relasi
+                   ->multiple() // Mendukung banyak pilihan
+                   ->preload() // Memuat data fasilitas untuk performa lebih baik
+                   ->required(),
                 FileUpload::make('images')
                 ->label('Gambar Ruangan')
                 ->image()
@@ -48,6 +57,9 @@ class RoomsResource extends Resource
                 ->label('Nama Ruangan'),
                 TextColumn::make('description')
                 ->label('Deskripsi Ruangan'),
+                TextColumn::make('facility.facility_name')
+                    ->badge()
+                    ->label('Fasilitas'),
                 ImageColumn::make('images')
                 ->label('Gambar Ruangan')
             ])

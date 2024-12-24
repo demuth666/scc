@@ -11,7 +11,7 @@ class BookingController extends Controller
 {
     public function detail($id)
     {
-        $rooms = Rooms::find($id);
+        $rooms = Rooms::with('facility')->find($id);
         $booking = Booking::where('room_id', $id)
             ->whereDate('tanggal', Carbon::now())
             ->get();
