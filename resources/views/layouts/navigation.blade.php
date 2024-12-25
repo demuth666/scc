@@ -54,6 +54,10 @@
                                 {{ __('Profile') }}
                             </x-dropdown-link>
 
+                            <x-dropdown-link :href="route('booking.history', Auth::user()->id)">
+                                {{ __('Booking') }}
+                            </x-dropdown-link>
+
                             <!-- Authentication -->
                             <form method="POST" action="{{ route('logout') }}">
                                 @csrf
@@ -103,6 +107,10 @@
 
                 <x-responsive-nav-link :href="route('profile.edit')">
                     {{ __('Profile') }}
+                </x-responsive-nav-link>
+
+                <x-responsive-nav-link :href="route('booking.history', Auth::user()->id)">
+                    {{ __('Booking') }}
                 </x-responsive-nav-link>
 
                 <!-- Authentication -->

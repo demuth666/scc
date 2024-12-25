@@ -13,19 +13,20 @@
         <h1 class=" text-[#111517] text-xl font-bold leading-tight tracking-[-0.015em] px-4 pb-2
                          pt-4 uppercase">{{$room->room_name}}</h1>
         <h3 class="text-[#111517] font-semibold leading-tight tracking-[-0.015em] px-4 pt-5">Fasilitas
-            Ruangan
+            Ruangan</h3>
         <div class="grid grid-cols-[repeat(auto-fit,minmax(158px,1fr))] gap-3 p-4">
             @foreach($room->facility as $facility)
-            <div class="flex flex-1 gap-3 rounded-lg border border-[#dce1e5] bg-white p-4 items-center">
-                <div class="text-[#111517]" data-icon="Car" data-size="15px" data-weight="regular">
-                    <img alt="icon" src="{{\Illuminate\Support\Facades\Storage::url($facility->icon)}}" class="w-8 h-8">
+                <div class="flex flex-1 gap-3 rounded-lg border border-[#dce1e5] bg-white p-4 items-center">
+                    <div class="text-[#111517]" data-icon="Car" data-size="15px" data-weight="regular">
+                        <img alt="icon" src="{{\Illuminate\Support\Facades\Storage::url($facility->icon)}}"
+                             class="w-8 h-8">
+                    </div>
+                    <h2 class="text-[#111517] text-base font-semibold leading-tight">{{$facility->facility_name}}</h2>
                 </div>
-                <h2 class="text-[#111517] text-base font-semibold leading-tight">{{$facility->facility_name}}</h2>
-            </div>
             @endforeach
         </div>
         <x-table>
-            <h2 class="text-[#111517] text-base font-semibold leading-tight pb-3">History Booking</h2>
+            <h2 class="text-[#111517] text-base font-semibold leading-tight pb-3">Booking hari ini</h2>
             <x-table.container>
                 <x-table.table>
                     <x-table.thead>
