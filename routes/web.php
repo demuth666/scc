@@ -20,6 +20,9 @@ Route::middleware('auth')->group(function () {
     Route::post('/booking/{id}', \App\Livewire\BookingForm::class)->name('booking.store');
     Route::get('/success', \App\Livewire\BookingSuccess::class)->name('booking.success');
 
+    //booking history
+    Route::get('/history/{id}', [BookingController::class, 'history'])->name('booking.history');
+
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');

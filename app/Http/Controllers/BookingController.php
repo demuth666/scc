@@ -21,4 +21,13 @@ class BookingController extends Controller
             'booking' => $booking,
         ]);
     }
+
+    public function history($id)
+    {
+        $booking = Booking::where('user_id', $id)->orderBy('tanggal', 'desc')->get();
+//        dd($booking->room->room_name);
+        return view('booking-history', [
+            'booking' => $booking,
+        ]);
+    }
 }

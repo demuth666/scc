@@ -4,6 +4,7 @@ namespace App\Livewire;
 
 use App\Models\Booking;
 use App\Models\Rooms;
+use Illuminate\Support\Facades\Auth;
 use Livewire\Component;
 
 class BookingForm extends Component
@@ -46,6 +47,7 @@ class BookingForm extends Component
 
         $booking = new Booking();
 
+        $booking->user_id = Auth::user()->id;
         $booking->room_id = $this->room->id;
         $booking->nama_lengkap = $this->nama_lengkap;
         $booking->nama_komunitas = $this->nama_komunitas;

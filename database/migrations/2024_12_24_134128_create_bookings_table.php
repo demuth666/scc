@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('bookings', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('user_id')->references('id')->on('users')->cascadeOnDelete()->cascadeOnUpdate();
             $table->foreignId('room_id')->references('id')->on('rooms')->cascadeOnDelete()->cascadeOnUpdate();
             $table->string('nama_lengkap');
             $table->string('nama_komunitas');
