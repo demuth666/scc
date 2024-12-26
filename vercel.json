@@ -24,12 +24,6 @@
         "VIEW_COMPILED_PATH": "/tmp",
         "CACHE_DRIVER": "array",
         "LOG_CHANNEL": "stderr",
-        "SESSION_DRIVER": "cookie",
-        "DB_CONNECTION": "mysql",
-        "DB_HOST": "1sqlv.h.filess.io",
-        "DB_PORT": "3307",
-        "DB_DATABASE": "scc_mixgetting",
-        "DB_USERNAME": "scc_mixgetting",
-        "DB_PASSWORD": "458675256be7925bcc5c9c5002003cc1ed18fb4a"
+        "SESSION_DRIVER": "cookie"
     }
 }
